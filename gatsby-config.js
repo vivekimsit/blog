@@ -3,6 +3,7 @@ module.exports = {
     title: 'Humble Programmer',
     author: 'Vivek Poddar',
     description: 'Personal blog.',
+    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
   },
   pathPrefix: '/gatsby-starter-blog',
   plugins: [
