@@ -25,19 +25,21 @@ const PostLink = ({ post }) => {
 
 const ReadingList = ({ books, file }) => {
   const readings = books.map(({ title, url, image }) => (
-    <a href={url} key={title} target="_blank" style={{ boxShadow: 'none' }}>
+    <a href={url} key={title} target="_blank" style={{ boxShadow: 'none', marginRight: 10 }}>
       <Img fixed={image.childImageSharp.fixed} />
     </a>
   ))
   return (
-    <div>
-      <h3 style={{ marginBottom: rhythm(1 / 4) }}>Readings</h3>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <h3 style={{ marginBottom: rhythm(1/4) }}>Readings</h3>
       <hr
         style={{
           marginBottom: rhythm(1),
         }}
       />
-      {readings}
+			<div style={{ display: 'flex' }}>
+				{readings}
+			</div>
     </div>
   )
 }
