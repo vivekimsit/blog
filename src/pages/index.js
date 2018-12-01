@@ -37,9 +37,9 @@ const ReadingList = ({ books, file }) => {
           marginBottom: rhythm(1),
         }}
       />
-			<div style={{ display: 'flex' }}>
-				{readings}
-			</div>
+      <div style={{ display: 'flex' }}>
+        {readings}
+      </div>
     </div>
   )
 }
@@ -116,7 +116,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark (
+        sort: {fields: [frontmatter___date], order: DESC },
+        filter: { frontmatter : { status: { eq: "published" }}}
+    ) {
       edges {
         node {
           excerpt
