@@ -32,11 +32,7 @@ const ReadingList = ({ books, file }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <h3 style={{ marginBottom: rhythm(1/4) }}>Readings</h3>
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
+      <hr style={{ marginBottom: rhythm(1) }} />
       <div style={{ display: 'flex' }}>
         {readings}
       </div>
@@ -71,11 +67,7 @@ class BlogIndex extends React.Component {
         <Bio />
         <ReadingList books={books} file={this.props.data.file} />
         <h3 style={{ marginBottom: rhythm(1 / 4) }}>Writings</h3>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr style={{ marginBottom: rhythm(1) }} />
         {posts}
       </Layout>
     )
@@ -99,7 +91,7 @@ export const pageQuery = graphql`
           url
           image {
             childImageSharp {
-              fixed(width: 200, height: 250) {
+              fixed(width: 100, height: 120) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -111,7 +103,7 @@ export const pageQuery = graphql`
       relativePath: { eq: "images/web-scalability-for-startup-engineers.png" }
     ) {
       childImageSharp {
-        fixed(width: 200, height: 250) {
+        fixed(width: 120, height: 150) {
           ...GatsbyImageSharpFixed
         }
       }
