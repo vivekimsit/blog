@@ -23,7 +23,7 @@ const PostLink = ({ post }) => {
   )
 }
 
-const ReadingList = ({ books, file }) => {
+const ReadingList = ({ books }) => {
   const readings = books.map(({ title, url, image }) => (
     <a href={url} key={title} target="_blank" style={{ boxShadow: 'none', marginRight: 10 }}>
       <Img fixed={image.childImageSharp.fixed} />
@@ -65,7 +65,7 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
-        <ReadingList books={books} file={this.props.data.file} />
+        <ReadingList books={books} />
         <h3 style={{ marginBottom: rhythm(1 / 4) }}>Writings</h3>
         <hr style={{ marginBottom: rhythm(1) }} />
         {posts}
@@ -96,15 +96,6 @@ export const pageQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-    file(
-      relativePath: { eq: "images/web-scalability-for-startup-engineers.png" }
-    ) {
-      childImageSharp {
-        fixed(width: 120, height: 150) {
-          ...GatsbyImageSharpFixed
         }
       }
     }
