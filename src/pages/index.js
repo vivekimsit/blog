@@ -23,20 +23,47 @@ const PostLink = ({ post }) => {
   )
 }
 
-const ReadingList = ({ books }) => {
-  const readings = books.map(({ title, url, image }) => (
-    <a href={url} key={title} target="_blank" style={{ boxShadow: 'none', marginRight: 10 }}>
-      <Img fixed={image.childImageSharp.fixed} />
-    </a>
-  ))
+function getProgressStyle({ current, total }) {
+  if (current >= total) {
+    return {
+      display: 'none'
+    }
+  }
+  return {
+    backgroundColor: 'green',
+    width: `${(current / total) * 100}%`,
+    height: 5,
+    marginTop: -8
+  }
+}
+
+const Reading = ({ url, title, image, progress }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
+    <a href={url} target="_blank" style={{ boxShadow: 'none', marginRight: 10 }}>
+      <Img fixed={image.childImageSharp.fixed} alt={title} />
+      <div style={getProgressStyle(progress)}></div>
+    </a>
+  )
+}
+
+const FlexCol = ({ children }) => (
+  <div style={{ display: 'flex', flexDirection: 'column' }}>
+    { children }
+  </div>
+)
+
+const ReadingList = ({ books }) => {
+  const readings = books.map((book, idx) => {
+    return <Reading key={idx} {...book} />
+  })
+  return (
+    <FlexCol>
       <h3 style={{ marginBottom: rhythm(1/4) }}>Readings</h3>
       <hr style={{ marginBottom: rhythm(1) }} />
       <div style={{ display: 'flex' }}>
         {readings}
       </div>
-    </div>
+    </FlexCol>
   )
 }
 
@@ -89,6 +116,10 @@ export const pageQuery = graphql`
         node {
           title
           url
+          progress {
+            current
+            total
+          }
           image {
             childImageSharp {
               fixed(width: 100, height: 120) {
