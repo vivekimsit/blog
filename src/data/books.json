@@ -9,6 +9,15 @@
     }
   },
   {
+    "title": "How Money Works",
+    "url": "https://www.amazon.co.uk/How-Money-Works-Visually-Explained/dp/024122599X/",
+    "image": "images/how-money-works.png",
+    "progress": {
+      "current": 1,
+      "total": 414
+    }
+  },
+  {
     "title": "The Alchemist",
     "url": "https://www.amazon.co.uk/Alchemist-Paulo-Coelho/dp/8172234988",
     "image": "images/the-alchemist.jpeg",
