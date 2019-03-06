@@ -4,7 +4,11 @@
     "url": "https://www.amazon.com/dp/0071843655/",
     "image": "images/web-scalability-for-startup-engineers.png",
     "progress": {
+<<<<<<< HEAD
       "current": 304,
+=======
+      "current": 361,
+>>>>>>> 951a2b1edde20aa814118a06d07a6af03f82f60f
       "total": 361
     }
   },

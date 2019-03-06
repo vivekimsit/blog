@@ -60,7 +60,7 @@ const ReadingList = ({ books }) => {
     <FlexCol>
       <h3 style={{ marginBottom: rhythm(1/4) }}>Readings</h3>
       <hr style={{ marginBottom: rhythm(1) }} />
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
         {readings}
       </div>
     </FlexCol>
