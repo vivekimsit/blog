@@ -2,7 +2,7 @@
 title: Frontend ecosystem 101
 date: '2019-02-21T14:42:03.284Z'
 tags: ['architecture']
-status: 'published'
+status: 'draft'
 ---
 
 Sometimes we are faced with the dilemma while choosing correct tool
@@ -18,7 +18,33 @@ The three main criteria are:
 
 * Your content rarely updates eg. Blogs.
 
+Key techinques for showing a web page to a client:
+
+SSR (Server side redering)
+----
+
+Pre rendering the page with all the data before sending it to client.
+
+Benefits:
+
+* Web crawlers can index the page
+
+* Link bots can show page preview (eg: Slack).
+
+* Performance i.e. faster initial page load.
+
 The following flow chart summarises the ecosystem in the React ecosystem so far.
+
+SPA (Single page application)
+---
+
+Server sends the application shell and then client loads the required data by
+making Ajax calls.
+
+Static rendering
+---
+
+
 
 
 ![Frontend Ecosystem](./react-ecosystem.png)

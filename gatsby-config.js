@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'Humble Programmer',
     author: 'Vivek Poddar',
-    description: 'Personal blog.',
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    description: 'Personal blog by Vivek Poddar.',
+    siteUrl: 'https://vivekpoddar.com',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
