@@ -14,13 +14,13 @@ The three main criteria are:
 
 * You need to make web crawlers happy (SEO).
 
-* You need to update the content frequently and need to avoid server roundtrips for full page reload.
+* You need to update the content frequently and need to avoid server round trips for full page reload.
 
 * Your content rarely updates eg. Blogs.
 
-Key techinques for showing a web page to a client:
+Key techniques for showing a web page to a client:
 
-## SSR (Server side redering)
+## SSR (Server side rendering)
 
 Pre rendering the page with all the data before sending it to the client.
 
